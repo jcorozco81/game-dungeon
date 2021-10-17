@@ -16,7 +16,7 @@ dotenv.config();
 app.use(express.json());
 
 // Confirm database name
-mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/gamedungeon", {
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/gamedungeon", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
