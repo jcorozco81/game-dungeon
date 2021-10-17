@@ -12,6 +12,8 @@ const path = require('path');
 // const routes = require('./routes');
 // Test
 
+const PORT = process.env.PORT || 5001;
+
 dotenv.config();
 app.use(express.json());
 
@@ -40,7 +42,7 @@ app.use("/api/blogs", blogRoute);
 
 
 
-app.listen("5001", () => {
+app.listen(PORT, () => {
     console.log("Backend is running.");
 });
 
