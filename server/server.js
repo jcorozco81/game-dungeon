@@ -1,5 +1,4 @@
 const express = require("express");
-const app = express();
 const dotenv = require ("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
@@ -12,6 +11,7 @@ const path = require('path');
 // const routes = require('./routes');
 // Test
 
+const app = express();
 const PORT = process.env.PORT || 5001;
 
 dotenv.config();
@@ -37,9 +37,7 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
   }
   
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-  });
+
 
 
 
