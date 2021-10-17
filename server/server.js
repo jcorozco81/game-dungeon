@@ -29,8 +29,8 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/gamedungeon", {
 
 
 // Test Start
-app.get('/test', (req, res) => res.sendFile(path.join(__dirname, './test/test.html')));
-app.use(express.static(path.join(__dirname, 'test')));
+// app.get('/test', (req, res) => res.sendFile(path.join(__dirname, './test/test.html')));
+// app.use(express.static(path.join(__dirname, 'test')));
 
 // Test End
 
